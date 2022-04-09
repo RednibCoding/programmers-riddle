@@ -1,0 +1,5 @@
+// Note:
+//    generate data-models: "flutter packages pub run build_runner build --delete-conflicting-outputs"
+//    build for windows run: "flutter config --enable-windows-desktop"
+//    build android release: flutter build appbundle --release
+//    create a flutter package: flutter create --template=package
