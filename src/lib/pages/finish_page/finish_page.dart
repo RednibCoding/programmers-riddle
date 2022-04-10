@@ -28,14 +28,6 @@ class _FinishPageState extends State<FinishPage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 32),
-              Text(
-                "Mode: ${gameState.numColumns} x ${gameState.numColumns}",
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
               const SizedBox(height: 8),
               const Text(
                 "Your time:",

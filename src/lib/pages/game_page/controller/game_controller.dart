@@ -31,9 +31,7 @@ class GameController {
   }
 
   static List<DataCell> _makeRowCells(int numColumns, int numNibblesPerRow) {
-    double size = numColumns <= 4 ? 52 : 32;
-    double fontSize = numColumns <= 4 ? 18 : 12;
-    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap, size: size, fontSize: fontSize)));
+    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap)));
     var numbers = _genNumbers(numNibblesPerRow, 1, 15);
     var numberStr = " ";
     for (final number in numbers) {
@@ -41,7 +39,7 @@ class GameController {
     }
     numberStr += " ";
     var cells = [
-      DataCell(Text(numberStr, style: TextStyle(fontSize: fontSize))),
+      DataCell(Text(numberStr)),
       ...list,
     ];
     gameState.numbers.addAll(numbers);
@@ -68,7 +66,7 @@ class GameController {
       child: DataTable(
         showBottomBorder: true,
         columnSpacing: 4,
-        dataRowHeight: 56,
+        dataRowHeight: 62,
         headingRowHeight: 0,
         dividerThickness: 0,
         border: TableBorder.all(color: Colors.transparent),

@@ -11,9 +11,6 @@ final GameState gameState = GameState();
 
 enum BoardSize {
   small,
-  medium,
-  large,
-  xlarge,
 }
 
 abstract class _GameStateBase with Store {
@@ -21,7 +18,7 @@ abstract class _GameStateBase with Store {
   bool isUpdating = false;
 
   @observable
-  BoardSize boardSize = BoardSize.medium;
+  BoardSize boardSize = BoardSize.small;
 
   @observable
   String elapsedTimeStr = "";
@@ -38,12 +35,6 @@ abstract class _GameStateBase with Store {
     switch (boardSize) {
       case BoardSize.small:
         return 4;
-      case BoardSize.medium:
-        return 8;
-      case BoardSize.large:
-        return 12;
-      case BoardSize.xlarge:
-        return 16;
     }
   }
 }

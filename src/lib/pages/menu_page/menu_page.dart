@@ -42,40 +42,13 @@ class _MenuPageState extends State<MenuPage> {
                 children: [
                   ElevatedButton(
                     onPressed: () => {gameState.boardSize = BoardSize.small, Navigator.pushNamed(menuPageKey.currentContext!, '/game')},
-                    child: const Text("4x4"),
+                    child: const Text("Go"),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.amberAccent.shade700,
                       shape: const CircleBorder(),
                       padding: const EdgeInsets.all(32),
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () => {gameState.boardSize = BoardSize.medium, Navigator.pushNamed(menuPageKey.currentContext!, '/game')},
-                    child: const Text("8x8"),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.amberAccent.shade700,
-                      shape: const CircleBorder(),
-                      padding: const EdgeInsets.all(32),
-                    ),
-                  ),
-                  // ElevatedButton(
-                  //   onPressed: () => MenuController.onEnterGame(BoardSize.large),
-                  //   child: const Text("12x12"),
-                  //   style: ElevatedButton.styleFrom(
-                  //     primary: Colors.amberAccent.shade700,
-                  //     shape: const CircleBorder(),
-                  //     padding: const EdgeInsets.all(32),
-                  //   ),
-                  // ),
-                  // ElevatedButton(
-                  //   onPressed: () => MenuController.onEnterGame(BoardSize.xlarge),
-                  //   child: const Text("16x16"),
-                  //   style: ElevatedButton.styleFrom(
-                  //     primary: Colors.amberAccent.shade700,
-                  //     shape: const CircleBorder(),
-                  //     padding: const EdgeInsets.all(32),
-                  //   ),
-                  // ),
                 ],
               ),
               const SizedBox(height: 36),
