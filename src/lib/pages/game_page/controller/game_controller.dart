@@ -31,7 +31,8 @@ class GameController {
   }
 
   static List<DataCell> _makeRowCells(int numColumns, int numNibblesPerRow) {
-    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap)));
+    double size = numColumns <= 4 ? 52 : 42;
+    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap, size: size)));
     var numbers = _genNumbers(numNibblesPerRow, 1, 15);
     var numberStr = " ";
     for (final number in numbers) {
