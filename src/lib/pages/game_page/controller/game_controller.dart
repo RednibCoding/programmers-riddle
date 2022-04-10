@@ -31,17 +31,17 @@ class GameController {
   }
 
   static List<DataCell> _makeRowCells(int numColumns, int numNibblesPerRow) {
-    double size = numColumns <= 4 ? 52 : 42;
-    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap, size: size)));
+    double size = numColumns <= 4 ? 52 : 32;
+    double fontSize = numColumns <= 4 ? 18 : 12;
+    var list = List.generate(numColumns, (_) => DataCell(Cell(onTap: _onTap, size: size, fontSize: fontSize)));
     var numbers = _genNumbers(numNibblesPerRow, 1, 15);
     var numberStr = " ";
     for (final number in numbers) {
       numberStr += _decDigitToHexDigit(number);
     }
     numberStr += " ";
-
     var cells = [
-      DataCell(Text(numberStr)),
+      DataCell(Text(numberStr, style: TextStyle(fontSize: fontSize))),
       ...list,
     ];
     gameState.numbers.addAll(numbers);

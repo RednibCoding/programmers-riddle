@@ -7,4 +7,4 @@ A minimalistic binary puzzle written in Flutter
 <img src="media/pic3.png" width="300" height="340" />
 
 ##
-You can try the web version here: [Programmers Riddle](https://62521aa8d793540448b7a72a--superb-kleicha-bf7f7d.netlify.app/#/)
+You can try the web version here: [Programmers Riddle](https://62522b62e620cf1478a604ef--superb-kleicha-bf7f7d.netlify.app/#/)
